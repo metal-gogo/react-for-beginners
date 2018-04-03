@@ -4,7 +4,6 @@ class StorePicker extends React.Component {
   render() {
     return (
       <Fragment>
-        <p>Hello men</p>
         { /* This is a comment in JSX */}
         <form action="" className="store-selector">
           <h2>Please Enter a Store</h2>
