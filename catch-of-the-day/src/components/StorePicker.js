@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 class StorePicker extends React.Component {
   render() {
-    return <p>I'm the store picker!</p>
+    return (
+      <Fragment>
+        <p>Hello men</p>
+        { /* This is a comment in JSX */}
+        <form action="" className="store-selector">
+          <h2>Please Enter a Store</h2>
+          <input type="text" name="" id="" required placeholder="Store Name"/>
+          <button type="submit">Visit store -> </button>
+        </form>
+      </Fragment>
+    )
   }
 }
 
