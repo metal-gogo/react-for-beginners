@@ -8,14 +8,16 @@ class StorePicker extends React.Component {
   //   this.goToStore = this.goToStore.bind(this);
   // }
 
-  myInput = React.createRef();
+  storeNameInput = React.createRef();
 
   /* This syntax works to make the function as a property of the component */
   goToStore = event => {
     // 1. Stop the form from submitting
     event.preventDefault();
     // 2. get the text from the input
+    const storeName = this.storeNameInput.value.value;
 
+    this.props.history.push(`/store/${storeName}`);
     // 3. Cange the page to /store/whatever-they-entered
   };
 
@@ -28,7 +30,7 @@ class StorePicker extends React.Component {
           required
           placeholder="Store Name"
           defaultValue={getFunName()}
-          ref={this.myInput}
+          ref={this.storeNameInput}
         />
         <button type="submit">Visit store -> </button>
       </form>
